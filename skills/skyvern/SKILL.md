@@ -29,7 +29,7 @@ An open session keeps a cloud browser running until it closes or times out.
 | Do several steps on one page | `skyvern_execute(steps=[{"tool": ..., "params": {...}}, ...])` | One round trip. Target each step by `selector` or `intent`. |
 | Map a page's controls | `skyvern_observe` | Returns the interactive elements. |
 | Read content | `skyvern_get_html(selector=...)`, `skyvern_get_value`, `skyvern_find` | `selector` is required; use `"body"` for the whole page, a tighter container on large pages. |
-| See the page | `skyvern_screenshot`, `skyvern_navigate_and_screenshot` | Use after any page-changing action to confirm it worked. |
+| See the page | `skyvern_screenshot(inline=true)`, `skyvern_navigate_and_screenshot` | Use after any page-changing action to confirm it worked. Without `inline=true` the result is a file path on the server, which you cannot open. |
 | Run JavaScript in the page | `skyvern_evaluate` | For values the DOM tools cannot reach. |
 | Debug a web app | `skyvern_console_messages`, `skyvern_network_requests`, `skyvern_network_request_detail`, `skyvern_get_errors`, `skyvern_har_start` / `skyvern_har_stop` | Capture starts when the session starts. |
 | Work across tabs or iframes | `skyvern_tab_list`, `skyvern_tab_new`, `skyvern_tab_switch`, `skyvern_tab_wait_for_new`, `skyvern_frame_list`, `skyvern_frame_switch`, `skyvern_frame_main` | |
