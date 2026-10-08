@@ -64,6 +64,14 @@ stores the resulting token. The manifest carries no API key.
 Passwords for the websites you automate are never typed by the model. `skyvern_login` signs in with
 a credential you have stored in Skyvern, Bitwarden, 1Password or Azure Key Vault, referenced by id.
 
+## If you already use Skyvern in Claude Code
+
+Grok Build also loads MCP servers from `~/.claude.json` and `.mcp.json`. If one of those files
+already defines a server named `skyvern`, Grok sees two servers with that name, and a session may
+connect to your existing one, which usually points at the full tool surface, instead of this
+plugin's. Run `grok mcp doctor skyvern` to see which URL is in use. To use the plugin's server,
+rename or remove the other `skyvern` entry.
+
 ## Network endpoints and credentials
 
 | Endpoint | Why |
