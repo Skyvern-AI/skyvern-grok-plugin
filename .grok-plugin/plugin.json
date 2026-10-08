@@ -1,6 +1,6 @@
 {
   "name": "skyvern",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Give Grok a cloud browser through Skyvern's hosted MCP server. Open pages, click, type, fill forms, upload files, read page content, take screenshots, and inspect console and network activity on real websites, including logged-in ones via stored credentials. Sign in with your Skyvern account; no API key needed.",
   "author": {
     "name": "Skyvern",
@@ -9,5 +9,6 @@
   "homepage": "https://www.skyvern.com",
   "repository": "https://github.com/Skyvern-AI/skyvern-grok-plugin",
   "license": "MIT",
-  "keywords": ["skyvern", "skyvern browser", "skyvern mcp"]
+  "keywords": ["skyvern", "skyvern browser", "skyvern mcp"],
+  "logo": "assets/logo.png"
 }
